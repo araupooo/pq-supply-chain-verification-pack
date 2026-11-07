@@ -1,0 +1,57 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded autocfg v1.5.1
+  Downloaded zeroize v1.9.1
+  Downloaded cfg-if v1.0.5
+  Downloaded kem v0.3.0
+  Downloaded cmov v0.5.4
+  Downloaded keccak v0.2.2
+  Downloaded base64ct v1.8.3
+  Downloaded crypto-common v0.2.2
+  Downloaded sponge-cursor v0.1.0
+  Downloaded module-lattice v0.2.4
+  Downloaded rand_core v0.10.1
+  Downloaded spki v0.8.1
+  Downloaded pkcs8 v0.11.0
+  Downloaded hybrid-array v0.4.15
+  Downloaded num-traits v0.2.19
+  Downloaded getrandom v0.4.3
+  Downloaded ml-kem v0.3.4
+  Downloaded ctutils v0.4.8
+  Downloaded digest v0.11.3
+  Downloaded const-oid v0.10.2
+  Downloaded typenum v1.20.1
+  Downloaded der v0.8.3
+  Downloaded sha3 v0.12.0
+  Downloaded shake v0.1.0
+  Downloaded libc v0.2.191
+   Compiling cmov v0.5.4
+   Compiling libc v0.2.191
+   Compiling typenum v1.20.1
+   Compiling getrandom v0.4.3
+   Compiling ctutils v0.4.8
+   Compiling cfg-if v1.0.5
+   Compiling rand_core v0.10.1
+   Compiling autocfg v1.5.1
+   Compiling hybrid-array v0.4.15
+   Compiling keccak v0.2.2
+   Compiling sponge-cursor v0.1.0
+   Compiling num-traits v0.2.19
+   Compiling module-lattice v0.2.4
+   Compiling crypto-common v0.2.2
+   Compiling digest v0.11.3
+   Compiling kem v0.3.0
+   Compiling shake v0.1.0
+   Compiling sha3 v0.12.0
+   Compiling ml-kem v0.3.4
+   Compiling rust-mlkem-verify v0.1.0 (/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/rust-mlkem/src)
+warning: use of deprecated trait `ml_kem::ExpandedKeyEncoding`: use `DecapsulationKey::from_seed` instead
+  --> src/main.rs:25:5
+   |
+25 |     ExpandedKeyEncoding, MlKem768,
+   |     ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: `rust-mlkem-verify` (bin "rust-mlkem-verify") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 20.93s
