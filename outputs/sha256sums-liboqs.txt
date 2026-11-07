@@ -1,0 +1,7 @@
+1fdf54c7e56434c7c360593a81686de79f105a4ac213446710556298922e6114  build1/liboqs/build/lib/liboqs.a
+fbd5dc65047d46d0d91c79da119a9665db6946e8fa7fc1f5a2c2a05ca4232d56  build2/liboqs/build/lib/liboqs.a
+0f416898c64f9081932fc1b722d08d5593e57739fd8361187f0b301ec1915962  build1/liboqs/build/lib/liboqs-internal.a
+65d0af0d6d276bee818321cd499967e0df07861d33e85701ddc843d651f52868  build2/liboqs/build/lib/liboqs-internal.a
+862b2aac3b28887a4ccd01f5ced7c429d649f014bf6f84e48b1f9663b5965c7e  fixed common.c.o (both builds, -ffile-prefix-map=<srcdir>=/liboqs)
+9349b6d5d2301c3868ede55b58d5863c58f8a28c95f26febc38dd583de16849b  liboqs-fixed-prefix-map.a (re-archived liboqs.a with fixed common.c.o)
+162d5b510518ee5f285f82fa1f16402a885176e818bf1b1a4c3c91c9a2f01eae  liboqs-0.16.0.tar.gz (GitHub codeload source tarball, matches Homebrew-published checksum)

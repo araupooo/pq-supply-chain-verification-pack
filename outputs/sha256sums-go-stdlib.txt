@@ -1,0 +1,11 @@
+# SHA-256 sums — Go stdlib crypto/mlkem + crypto/mldsa rebuild verification
+# Test program source (identical in src/, build1/, build2/):
+9d5ee30bb00204f62a32da902487cc72521ecd6478b451bb45a3963805234cd0  src/main.go
+12178a05283d57a41286c2bafd062e2fd124cd8f9be9b2f94002e41f2cb2d5fb  src/go.mod
+# Rebuilt binaries (two independent clean builds):
+d81e1efa546db902d66b25fbee72e45827b493b0400a4f80f447ffcb20abab22  build1/pqcheck
+d81e1efa546db902d66b25fbee72e45827b493b0400a4f80f447ffcb20abab22  build2/pqcheck
+# Published Go 1.27.3 linux/amd64 toolchain distribution. Published value from
+# go.dev/dl/?mode=json and https://dl.google.com/go/go1.27.3.linux-amd64.tar.gz.sha256
+# (both agree). Downloaded file verified OK against it; see RESULT.md.
+65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40  research/go1.27.3.linux-amd64.tar.gz
