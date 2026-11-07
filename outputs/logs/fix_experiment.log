@@ -1,0 +1,9 @@
+build1 fixed common.c.o:
+862b2aac3b28887a4ccd01f5ced7c429d649f014bf6f84e48b1f9663b5965c7e  /tmp/fixed_common_1.o
+/liboqs/common/common.c
+common.c
+build2 fixed common.c.o:
+862b2aac3b28887a4ccd01f5ced7c429d649f014bf6f84e48b1f9663b5965c7e  /tmp/fixed_common_2.o
+/liboqs/common/common.c
+common.c
+FIXED OBJECTS IDENTICAL
