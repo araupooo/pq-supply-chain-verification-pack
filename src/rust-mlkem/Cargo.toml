@@ -1,0 +1,14 @@
+[package]
+name = "rust-mlkem-verify"
+version = "0.1.0"
+edition = "2021"
+description = "Fixed verification program: ML-KEM-768 keygen + encapsulate + decapsulate round-trip (RustCrypto ml-kem 0.3.4, FIPS 203)"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+ml-kem = { version = "=0.3.4", features = ["getrandom"] }
+
+[profile.release]
+# Keep the build reproducible and free of debug paths where possible.
+# (No debug info, no incremental compilation in release by default.)
+debug = false
