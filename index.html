@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Post-Quantum Supply-Chain Verification Pack</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1000px;margin:2em auto;
+padding:0 1em;line-height:1.5;color:#111}
+table{border-collapse:collapse;width:100%;margin:1em 0}
+th,td{border:1px solid #999;padding:4px 8px;text-align:left;font-size:14px}
+th{background:#eee}
+code{background:#f2f2f2;padding:0 3px;font-size:13px}
+h1{font-size:24px}h2{font-size:19px;margin-top:1.5em}
+.good{color:#0a6b0a}.bad{color:#a00}.warn{color:#8a5a00}
+</style>
+</head>
+<body>
+<h1>Post-Quantum Supply-Chain Verification Pack</h1>
+<p>Do four pinned post-quantum library targets rebuild deterministically
+from published source, and can a consumer trace each distributed
+binary or package back to that source with a verifiable hash or
+signature? All work done 2026-11-07 on one Linux x86_64 machine
+(gcc 13.3.0, cmake 3.28.3, Go 1.27.3, rustc/cargo 1.99.1).</p>
+
+<h2>Headline results</h2>
+<ul>
+<li><strong class="bad">liboqs 0.16.0 — NONDETERMINISTIC with upstream defaults.</strong>
+Two clean Release builds differ: <code>1fdf54c7e56434c7c360593a81686de79f105a4ac213446710556298922e6114</code>
+vs <code>fbd5dc65047d46d0d91c79da119a9665db6946e8fa7fc1f5a2c2a05ca4232d56</code>
+(both 38,720,354 bytes). Exactly 1 of 2,634 archive members differs
+(<code>src/common/common.c.o</code>): the only difference is the absolute
+build path embedded by GCC. <code>-ffile-prefix-map</code> removes it
+(objects identical <code>862b2aac3b28887a4ccd01f5ced7c429d649f014bf6f84e48b1f9663b5965c7e</code>; re-archived libraries
+identical <code>9349b6d5d2301c3868ede55b58d5863c58f8a28c95f26febc38dd583de16849b</code>).</li>
+<li><strong class="good">pq-crystals kyber + dilithium — DETERMINISTIC.</strong>
+All artifacts per repo byte-identical across two fresh-clone rebuilds (16 kyber, 17 dilithium),
+no flags needed (e.g. kyber <code>test_kyber512</code>
+<code>0dddaf013fe872b87544e32a14669c04130c6077d8ca9d9d94d775fb4a28cfad</code>;
+dilithium <code>test_dilithium2</code>
+<code>e1187499d2fd9d157d92ed8e9b07ebddd2e3c0ec74c5f908d23499f13543e287</code>).
+24/24 test-binary runs exit 0; KAT <code>.rsp</code>
+outputs identical across runs.</li>
+<li><strong class="good">Go stdlib crypto/mlkem + crypto/mldsa (Go 1.27.3) — DETERMINISTIC.</strong>
+Two clean builds of a fixed ML-KEM-768 / ML-DSA-65 test program produce
+byte-identical binaries: <code>d81e1efa546db902d66b25fbee72e45827b493b0400a4f80f447ffcb20abab22</code>
+(2,968,564 bytes). Program passes on both builds. Toolchain tarball
+checksum verified against the published value
+(<code>65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40</code>); installed tree
+byte-identical to the verified distribution.</li>
+<li><strong class="good">Rust ml-kem 0.3.4 — DETERMINISTIC, with conditions.</strong>
+Two <code>--locked</code> release builds byte-identical:
+<code>bbe66602760785e69e5f03f913a7b9369896737f90e2a3cc8d8f3ae07699d686</code>
+(504,928 bytes) — only with identical build paths plus canonical
+<code>--remap-path-prefix</code> and fixed <code>SOURCE_DATE_EPOCH</code>.
+Plain builds in differently-named directories differ (rustc embeds
+absolute registry paths). Published <code>.crate</code> checksum matches
+<code>Cargo.lock</code> exactly
+(<code>84ca78b66f46050d49fa21693ae8adab2081d8101b65d8067316b6b70b64a0d1</code>); its source is byte-identical to the
+tagged repo tree.</li>
+</ul>
+
+<h2>Pinned targets</h2>
+<table>
+<tr><th>Target</th><th>Version / commit</th><th>Deterministic</th></tr>
+<tr><td>liboqs</td><td>0.16.0, <code>5a1a854b0dc9f2141bdc771c555ee60c37950183</code> (2026-07-09)</td><td class="bad"><strong>NO</strong> (upstream defaults)</td></tr>
+<tr><td>pq-crystals/kyber</td><td>HEAD <code>3edd5af5991927164edd4aacebfcbee00b8064e7</code> (2026-08-02)</td><td class="good"><strong>YES</strong></td></tr>
+<tr><td>pq-crystals/dilithium</td><td>HEAD <code>d35ba3fe5449bee3e6d43e1f296c3ca818bd36be</code> (2026-06-03)</td><td class="good"><strong>YES</strong></td></tr>
+<tr><td>Go stdlib</td><td>Go 1.27.3, ML-KEM-768 + ML-DSA-65</td><td class="good"><strong>YES</strong></td></tr>
+<tr><td>Rust ml-kem</td><td>0.3.4, tag <code>ml-kem/v0.3.4</code> = <code>6855b16a6cca9fc1c3eaea76776a7cd50ad67846</code> (2026-10-31)</td><td class="good"><strong>YES</strong> (with stated conditions)</td></tr>
+</table>
+
+<h2>Severity-ranked findings</h2>
+<table>
+<tr><th>ID</th><th>Severity</th><th>Finding</th></tr>
+<tr><td>F-01</td><td class="bad"><strong>HIGH</strong></td><td>liboqs 0.16.0 publishes <strong>no verifiable artifact at all</strong> — no signed release, no published hash, no attestation, no binary; the tag is lightweight (unsigned). A consumer has no upstream-issued integrity value to check. Only independently checkable hash: Homebrew's republished tarball checksum (verified: <code>162d5b510518ee5f285f82fa1f16402a885176e818bf1b1a4c3c91c9a2f01eae</code>).</td></tr>
+<tr><td>F-02</td><td class="bad"><strong>HIGH</strong></td><td>liboqs 0.16.0 is <strong>not deterministically rebuildable with upstream defaults</strong> — absolute build path embedded in one object (<code>src/common/common.c.o</code>). Fixable with <code>-ffile-prefix-map</code> (demonstrated at object + re-archive level); upstream documents no reproducible-build support.</td></tr>
+<tr><td>F-03</td><td class="warn"><strong>MEDIUM</strong></td><td>Rust <code>ml-kem</code> 0.3.4: plain builds are <strong>not bit-reproducible</strong> — rustc embeds absolute registry paths and path-derived LLVM symbol hashes. Deterministic only with identical paths + canonical remap. Three failed pairs documented with causes.</td></tr>
+<tr><td>F-04</td><td class="warn"><strong>MEDIUM</strong></td><td>pq-crystals kyber/dilithium publish <strong>no releases, binaries, or checksums</strong>; only pinned commits + rebuild reproducibility + in-repo KAT vectors. Kyber README: no longer actively maintained, points to mlkem-native.</td></tr>
+<tr><td>F-05</td><td class="warn"><strong>MEDIUM</strong></td><td>Go 1.27.3 toolchain <code>.asc</code> signature <strong>UNVERIFIED</strong> — no trusted Go release public key obtainable (keyservers failed). Checksum verified independently via two agreeing published sources + installed-tree diff.</td></tr>
+<tr><td>F-06</td><td><strong>LOW</strong></td><td>RustCrypto/KEMs publishes via <strong>lightweight unsigned tags; zero GitHub Releases</strong>. Mitigated: <code>.crate</code> checksum matches <code>Cargo.lock</code> and source is byte-identical to the tagged tree. A same-named branch points at a different commit — the tag commit is authoritative.</td></tr>
+<tr><td>F-07</td><td><strong>LOW</strong></td><td>Vendored dependencies (build-graph level): liboqs fetches nothing at build time (in-tree AES/SHA-2/SHA-3, optional system OpenSSL); pq-crystals has none; Go test program has none; Rust <code>ml-kem</code> has 28 locked packages, all checksum-verified by Cargo. Downstream liboqs packages are third-party rebuilds, hashes not compared.</td></tr>
+<tr><td>F-08</td><td><strong>INFO</strong></td><td>Go stdlib rebuild: 2,618/2,619 cache entries identical after timestamp normalization; sole exception <code>trim.txt</code>, a bare cache-trim timestamp, not a build artifact.</td></tr>
+</table>
+
+<h2>Traceability gaps (summary)</h2>
+<table>
+<tr><th>Artifact</th><th>Gap</th></tr>
+<tr><td>liboqs 0.16.0 release</td><td>No assets, no hash, no signature, no attestation; unsigned tag</td></tr>
+<tr><td>pq-crystals kyber / dilithium</td><td>No releases, no binaries, no packages, no published checksums</td></tr>
+<tr><td>Go 1.27.3 toolchain</td><td>Checksum VERIFIED; PGP signature UNVERIFIED (no obtainable public key)</td></tr>
+<tr><td>Rust ml-kem 0.3.4</td><td><code>.crate</code> VERIFIED vs <code>Cargo.lock</code>; tag unsigned, no GitHub Releases</td></tr>
+</table>
+
+<h2>Runtime checks</h2>
+<ul>
+<li>Go <code>pqcheck</code>: ALL CHECKS PASSED on both builds — ML-KEM-768 ek 1184, dk seed 64, ct 1088, ss 32; ML-DSA-65 pk 1952, sig 3309; tampered message rejected.</li>
+<li>Rust <code>rust-mlkem-verify</code>: ML-KEM-768 round-trip OK on both builds — ek 1184, dk seed 64 / expanded 2400, ct 1088, ss 32, shared secrets match.</li>
+<li>kyber <code>test_kyber512/768/1024</code> and <code>test_vectors*</code>: exit 0; stdout hashes identical r1 vs r2. KAT <code>PQCkemKAT_1632.rsp</code> identical (<code>a30184edee53b3b009356e1e31d7f9e93ce82550e3c622d7192e387b0cc84f2e</code>).</li>
+<li>dilithium <code>test_dilithium2/3/5</code> and <code>test_vectors*</code>: exit 0; stdout hashes identical r1 vs r2. KAT <code>PQCsignKAT_Dilithium2.rsp</code> identical (<code>1d29c3b4ec68e3455f87f49b3386a2a6fc5e167c76e476c4770317ffbb97d242</code>).</li>
+</ul>
+
+<h2>How to re-run</h2>
+<pre>python3 src/verify_hashes.py   # seconds: checks the 95 recorded hashes
+./src/run_all.sh               # ~40-60 min: full rebuild of all targets</pre>
+<p><code>run_all.sh</code> exits 0 only if every observed outcome matches its
+recorded expectation. Full methodology, matrix, limitations, and
+claim-to-evidence index: <code>README.md</code>, <code>matrix.md</code>,
+<code>rubric.md</code>, <code>index.md</code>, <code>findings.md</code>.
+Unedited logs and preserved artifacts: <code>outputs/</code>.</p>
+
+<h2>Limitations</h2>
+<ul>
+<li>liboqs: static library only; the <code>-ffile-prefix-map</code> fix was demonstrated at object + re-archive level, not by a third pair of full clean rebuilds; test suite not run; Makefiles used (Ninja not installed).</li>
+<li>pq-crystals: <code>ref/</code> only; KAT check is r1-vs-r2 self-consistency, not comparison against NIST-published KAT files.</li>
+<li>Go: "rebuild" is defined explicitly in the rubric (stdlib ships in the toolchain); toolchain <code>.asc</code> UNVERIFIED.</li>
+<li>Rust: determinism holds only under the stated conditions; ML-KEM-768 only; crate's own NIST KAT suite not run.</li>
+<li>Single machine, single toolchain. Attestation/signature questions that hit GitHub API rate limits are labelled UNVERIFIED, not claimed either way.</li>
+</ul>
+</body>
+</html>

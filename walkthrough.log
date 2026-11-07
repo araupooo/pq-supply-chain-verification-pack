@@ -1,0 +1,202 @@
+Post-quantum supply-chain verification pack — build/run walkthrough
+
+2026-11-07 ~23:50 WIB work started.
+- Layout mirrored from sibling task dirs ../task-a80f1292 (ML-DSA pack)
+  and ../task-f96b1267 (ML-KEM timing pack): README.md, findings.md,
+  index.md, matrix.md, rubric.md, index.html, src/, outputs/, pack/,
+  repo/, walkthrough.log. Working evidence in targets/ (per-target
+  RESULT.md, build trees, logs, hashes).
+- Toolchains confirmed at start: gcc 13.3.0, cmake 3.28.3, git 2.43.0,
+  python3 3.12.3, rustc/cargo 1.99.1 already installed; Go 1.27.3
+  installed from go.dev (tarball checksum verified against published
+  value, see go-stdlib RESULT.md).
+- Four independent rebuild targets delegated to four parallel workers,
+  each with its own directory under targets/ and instructions to pin
+  from primary sources, do two independent clean rebuilds, compare
+  SHA-256 hashes, preserve unedited logs, and never massage outputs.
+
+2026-11-08 ~00:09-00:54 WIB worker results arrived (UTC 17:09-17:54).
+- Go stdlib: deterministic YES. Two clean builds byte-identical
+  (d81e1efa...ab22, 2,968,564 B); program ALL CHECKS PASSED on both;
+  toolchain checksum VERIFIED; .asc signature UNVERIFIED (no trusted
+  Go release public key obtainable; both keyservers failed). Stdlib
+  rebuild: 2,618/2,619 cache entries identical after timestamp
+  normalization (trim.txt only). First stdlib rebuild-2 attempt failed
+  on /tmp ENOSPC (512 MB tmpfs); preserved and rerun cleanly.
+- Rust ml-kem 0.3.4 (tag commit 6855b16a...): deterministic YES with
+  conditions. Final pair identical (98aec69a...eaf7b3, 504,928 B).
+  Plain builds NOT reproducible: v1 plain (7fb78d57 vs 972c1dff),
+  v2 non-canonical remap silently failed, v3 differing cargo-home
+  names still leaked — all three pairs' logs preserved. .crate
+  checksum matches Cargo.lock exactly; .crate src/ byte-identical to
+  tagged tree. Tag is lightweight (unsigned); repo has zero GitHub
+  Releases. Branch/tag name collision (ml-kem/v0.3.4) resolved: tag
+  commit authoritative, ml-kem/ tree identical at both.
+- pq-crystals: deterministic YES for both repos. kyber HEAD 3edd5af5,
+  dilithium HEAD d35ba3fe; all 16 artifacts per repo byte-identical;
+  24/24 test runs exit 0; KAT .rsp identical across runs. Neither repo
+  has any releases. Dilithium r1 nistkat build failed on /tmp ENOSPC;
+  remediated with TMPDIR in workspace, rebuilt binaries hash-match r2.
+  First test pass lost stdout to full /tmp; all test binaries re-run
+  with workspace capture (retest logs are authoritative).
+- liboqs 0.16.0 (tag commit 5a1a854b): NONDETERMINISTIC with upstream
+  defaults. liboqs.a 1fdf54c7 vs fbd5dc65, same size 38,720,354 B.
+  Exactly 1 of 2,634 members differs (src/common/common.c.o, absolute
+  path embedded). -ffile-prefix-map fix demonstrated at object +
+  re-archive level (objects 862b2aac, libraries 9349b6d5), not a third
+  full rebuild pair. Highest-severity gap: release has zero assets —
+  no binary, hash, signature, or attestation; tag lightweight. Tarball
+  hash verified against Homebrew's published checksum (162d5b51).
+  First build attempt failed ~50% on /tmp ENOSPC; reran with TMPDIR
+  in workspace; failed logs preserved.
+
+Assembly (this session, after all four workers reported):
+- Read all four RESULT.md files in full; independently re-verified the
+  headline hashes against the actual artifacts (liboqs .a pair,
+  fixed-prefix-map .a, tarball, kyber/dilithium test + KAT binaries,
+  go pqcheck pair, rust binaries pair, ml-kem .crate). All matched the
+  workers' reports.
+- Independently re-ran the liboqs member comparison with a Python ar
+  parser: 2,634 members, exactly 1 differing (common.c.o); extracted
+  both versions into outputs/artifacts/liboqs/ (91b6caea vs bb316ae5).
+  strings on them confirms the only difference is the embedded
+  absolute build path (build1 vs build2).
+- Vendored-dependency assessment (build-graph level): liboqs
+  CMakeLists.txt has no FetchContent/ExternalProject — in-tree AES/
+  SHA-2/SHA-3 plus algorithm code, optional system OpenSSL only.
+- Consolidated outputs/: 95-entry SHA256SUMS covering all preserved
+  artifacts (go + rust binaries, all 64 pq-crystals artifacts, the two
+  differing liboqs members, the liboqs tarball, the ml-kem .crate, the
+  two KAT .rsp files) — verified with sha256sum -c: 95 OK. Note: the
+  workers' own sha256sums.txt files have format/path issues (liboqs
+  entries carry parenthetical annotations; pq-crystals combined file
+  uses per-run relative paths), so the pack's SHA256SUMS was generated
+  fresh from the actual files and verified; the workers' files are kept
+  as-is under outputs/sha256sums-*.txt for the record.
+- Wrote README.md, findings.md (F-01..F-08), matrix.md, index.md,
+  rubric.md, index.html (self-contained rendered page).
+- Wrote src/run_all.sh (full rebuild harness; exits 0 only if observed
+  outcomes match recorded expectations, including liboqs expected
+  NONDETERMINISTIC with equal sizes) and src/verify_hashes.py.
+- Clean-checkout validation: copied src/ to validation/clean-checkout
+  and started ./src/run_all.sh in the background (liboqs pair dominates,
+  ~35 min). /tmp is a 512 MB tmpfs that the liboqs build exhausts, so
+  the validation copy lives in the workspace and run_all.sh sets
+  TMPDIR inside its workdir — recorded here as a documented deviation
+  from a literal /tmp checkout, with the same clean-copy property.
+- [validation outcome to be filled in when the background run finishes]
+
+2026-11-08 ~01:40 WIB first clean-checkout validation finished: MISMATCH.
+liboqs reproduced as expected (rerun pair 6356db78 vs 930870be, both
+38,720,386 B, 2,634 members each — independently re-checked with the
+ar parser: exactly 1 differing member, common.c.o, again). kyber
+DETERMINISTIC (16 artifacts), dilithium DETERMINISTIC (17 artifacts —
+note: the worker's report said 16 but its table lists 17; the rerun
+confirms 17, and the pack docs now say 17). Go DETERMINISTIC, hash
+matches recorded d81e1efa, program passes. Rust FAILED: build 1
+produced 45233b72 (not the recorded 98aec69a — expected under the
+worker's own finding, since the recorded hash was built at a different
+absolute path and rustc embeds source paths), and build 2 produced NO
+binary: cargo re-download of the registry failed with "transfer too
+slow" (transient crates.io/network failure after CARGO_HOME was wiped
+between builds). Two harness defects, both fixed in src/run_all.sh:
+(1) a single CARGO_HOME is now populated once with `cargo fetch` and
+reused for both builds, builds run --offline; (2) the Rust method now
+remaps THREE path families (target dir, cargo home, source copy) to
+fixed placeholders, making the hash checkout-independent — verified in
+validation/rust-remap-test: two builds in different directories produce
+byte-identical binaries 315becfe...fd8f09, both run OK (round-trip OK).
+The pack's canonical recorded Rust hash is now 315becfe (artifacts,
+SHA256SUMS, and all docs updated); the worker's original path-dependent
+v4 hash 98aec69a is preserved in outputs/RESULT-rust-mlkem.md §4 and
+noted in findings F-03 and rubric.md. Dilithium count corrected 16→17
+everywhere. pack/ and repo/ re-staged; SHA256SUMS re-verified 95/95.
+- Full re-validation of the fixed harness started in the background
+  (fresh validation/clean-checkout, ./src/run_all.sh) — outcome below.
+- Second validation run (started 18:45 UTC) finished MISMATCH for an
+  environmental reason, not a pack failure: a transient "Operation not
+  permitted" on writes hit the whole validation tree mid-run (liboqs
+  build2 failed, git clones partially failed, cp wrote 0-byte files);
+  writes worked again minutes later and no cause was determinable from
+  available evidence (127 GB free, no quota tool). That run is invalid
+  and was discarded.
+- Third validation run (started 19:12 UTC) finished MISMATCH on the Rust
+  section only; everything else PASSED: liboqs NONDETERMINISTIC as
+  recorded (pair 6356db78 vs 930870be — byte-identical to the first
+  run's pair, as expected: the only nondeterminism source is the
+  absolute build path, and the checkout path was identical; rerun
+  libraries are 38,720,386 B vs the worker's 38,720,354 B, a 32-byte
+  difference exactly equal to the embedded-path length difference),
+  kyber/dilithium DETERMINISTIC with headline hashes matching recorded,
+  Go DETERMINISTIC with hash matching recorded. Rust failed for TWO
+  harness bugs, both fixed: (a) `cargo fetch` ran without `cd` into the
+  source copy, so it failed with "could not find Cargo.toml" and the
+  registry stayed empty, then --offline builds failed with "no matching
+  package named ml-kem"; (b) [already fixed earlier] single CARGO_HOME +
+  --offline. The fetch fix was verified standalone in
+  validation/rust-fetch-test (a third directory): fetch exit 0, both
+  builds 315becfe...fd8f09, both run OK. The fixed run_all.sh was copied
+  to pack/, repo/, and the validation checkout (note: `cp` with multiple
+  file destinations fails — use separate cp commands).
+- Fourth validation run started 20:07 UTC with the fixed harness.
+  NOTE: this "run" was actually TWO overlapping run_all.sh instances
+  sharing one workdir and one log, and its results are INVALID as a
+  validation. The launch exec call hit an output-drain timeout and the
+  runtime retried the whole launch command ~13 min later; the retry's
+  `rm -rf rerun` deleted the first instance's in-progress liboqs clone
+  mid-flight (hence the first instance's "fetch-pack: invalid index-pack
+  output" git error), and the second instance then hit "destination path
+  already exists" on every clone and reused the first instance's trees.
+  Evidence: two SUMMARY blocks in one rerun.log (20:19:27 and
+  20:31:25); the first instance's non-liboqs sections are still valid
+  (pq-crystals DETERMINISTIC, Go DETERMINISTIC with recorded hash, Rust
+  DETERMINISTIC with 315becfe on both builds — the first clean
+  end-to-end Rust pass). Fix: run_all.sh now refuses to run into a
+  non-empty workdir (loud error, exit 2) so a retried launch fails
+  immediately instead of corrupting a live run; the final validation
+  uses a fresh workdir (./rerun-final) launched by a short command with
+  no trailing sleep.
+- Fifth (final) validation run started 20:34 UTC, single instance
+  confirmed, fresh workdir ./rerun-final. Outcome: liboqs
+  NONDETERMINISTIC as recorded (new pair 2dc5f8f9 vs b1eb79d0, both
+  38,720,386 B — different hashes from run 1 because the workdir path
+  differs, exactly as the path-embedding finding predicts);
+  kyber DETERMINISTIC (16), dilithium DETERMINISTIC (17); Go
+  DETERMINISTIC with recorded hash, program passes. Rust FAILED AGAIN:
+  `cargo fetch` hit "transfer too slow" on the crates.io index
+  (0 bytes in 30 s, all 3 tries) — the same transient network failure
+  as run 1. Fix: dependencies VENDORED into src/rust-mlkem/vendor/
+  (`cargo vendor`, 13 MB, 28 crates) with .cargo/config.toml; the Rust
+  build now needs NO network (Cargo still verifies every vendored crate
+  against Cargo.lock). Verified in validation/va and vb (two different
+  directories): identical hash bbe66602...99d686, both run OK. The
+  canonical recorded Rust hash is now bbe66602 (new embedded paths
+  /src/vendor/... vs /cargo-home/registry/...); lineage documented in
+  findings F-03 and rubric.md (98aec69a worker v4 → 315becfe
+  three-remap registry → bbe66602 vendored). Artifacts, SHA256SUMS
+  (95/95 re-verified), and all docs updated; pack/ and repo/ re-staged
+  (36 MB each with vendor/).
+- Sixth (final) validation run started 21:24 UTC with the vendored harness,
+  fresh workdir ./rerun-vendored, single instance confirmed. Outcome:
+  PASS at 21:55:10 UTC — "ALL TARGETS: observed outcomes match the
+  recorded expectations". liboqs NONDETERMINISTIC as recorded (new pair
+  bd1c8567 vs 6d164831, both 38,720,386 B — again different hashes from
+  earlier runs because the workdir path differs, exactly as the
+  path-embedding finding predicts); kyber DETERMINISTIC (16 artifacts),
+  dilithium DETERMINISTIC (17 artifacts); Go DETERMINISTIC with recorded
+  hash d81e1efa, program ALL CHECKS PASSED; Rust DETERMINISTIC with
+  recorded hash bbe66602 on both builds, round-trip OK; pq-crystals
+  headline hashes match recorded values. Single SUMMARY block in the
+  log; no concurrent runs. The quickstart is genuinely passing from a
+  clean checkout. (Note: the run lived in the workspace, not /tmp,
+  because /tmp is a 512 MB tmpfs the liboqs build exhausts — documented
+  deviation, same clean-copy property.)
+- Pack complete and staged in pack/ and repo/ (36 MB each): README.md,
+  findings.md (F-01..F-08), index.md, matrix.md, rubric.md, index.html
+  (all full hashes verbatim, zero truncated), src/ (run_all.sh,
+  verify_hashes.py, per-target programs/scripts, vendored Rust deps),
+  outputs/ (SHA256SUMS 95/95 verified, preserved artifacts, unedited
+  logs, four RESULT-*.md reports), walkthrough.log, submission-text.txt
+  (task-dir level only, with <REPO-URL-TO-FILL-IN> placeholder).
+  Nothing submitted; no repository created here (repository creation
+  and submission are handled separately).
