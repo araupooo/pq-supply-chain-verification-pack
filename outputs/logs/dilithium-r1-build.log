@@ -1,0 +1,86 @@
+=== checkout ===
+d35ba3fe5449bee3e6d43e1f296c3ca818bd36be
+d35ba3fe5449bee3e6d43e1f296c3ca818bd36be 2026-06-03T22:03:07+02:00 Fix for issue #113: Added stricter infinity norm check as required by spec.
+=== build: make in ref/ ===
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=2 \
+  -o test/test_dilithium2 test/test_dilithium.c randombytes.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=3 \
+  -o test/test_dilithium3 test/test_dilithium.c randombytes.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=5 \
+  -o test/test_dilithium5 test/test_dilithium.c randombytes.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=2 \
+  -o test/test_vectors2 test/test_vectors.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=3 \
+  -o test/test_vectors3 test/test_vectors.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=5 \
+  -o test/test_vectors5 test/test_vectors.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+make exit status: 0
+=== build: make speed shared nistkat (dilithium default 'all' is test-only) ===
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -UDBENCH -o test/test_mul test/test_mul.c randombytes.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=2 \
+  -o test/test_speed2 test/test_speed.c test/speed_print.c test/cpucycles.c randombytes.c \
+  sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=3 \
+  -o test/test_speed3 test/test_speed.c test/speed_print.c test/cpucycles.c randombytes.c \
+  sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=5 \
+  -o test/test_speed5 test/test_speed.c test/speed_print.c test/cpucycles.c randombytes.c \
+  sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=2 \
+  -o libpqcrystals_dilithium2_ref.so sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c symmetric-shake.c
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=3 \
+  -o libpqcrystals_dilithium3_ref.so sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c symmetric-shake.c
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -DDILITHIUM_MODE=5 \
+  -o libpqcrystals_dilithium5_ref.so sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c symmetric-shake.c
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wvla -Wpointer-arith -O3 -fomit-frame-pointer -o libpqcrystals_fips202_ref.so fips202.c
+cc -Wno-unused-result -O3 -fomit-frame-pointer -DDILITHIUM_MODE=2 \
+  -o nistkat/PQCgenKAT_sign2 nistkat/PQCgenKAT_sign.c nistkat/rng.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c  -lcrypto
+cc -Wno-unused-result -O3 -fomit-frame-pointer -DDILITHIUM_MODE=3 \
+  -o nistkat/PQCgenKAT_sign3 nistkat/PQCgenKAT_sign.c nistkat/rng.c sign.c packing.c polyvec.c poly.c ntt.c reduce.c rounding.c fips202.c symmetric-shake.c  -lcrypto
+nistkat/PQCgenKAT_sign.c:259:1: fatal error: error writing to /tmp/ccSpvYKy.s: No space left on device
+  259 | }
+      | ^
+compilation terminated.
+nistkat/rng.c:213:1: fatal error: error writing to /tmp/ccSpvYKy.s: No space left on device
+  213 | }
+      | ^
+compilation terminated.
+make: *** [Makefile:113: nistkat/PQCgenKAT_sign3] Error 1
+make speed/shared/nistkat exit status: 2
+=== artifacts ===
+./libpqcrystals_dilithium2_ref.so
+./libpqcrystals_dilithium3_ref.so
+./libpqcrystals_dilithium5_ref.so
+./libpqcrystals_fips202_ref.so
+./nistkat/PQCgenKAT_sign2
+./test/test_dilithium2
+./test/test_dilithium3
+./test/test_dilithium5
+./test/test_mul
+./test/test_speed2
+./test/test_speed3
+./test/test_speed5
+./test/test_vectors2
+./test/test_vectors3
+./test/test_vectors5
+=== sha256 ===
+7920c3ae8ed9a3a5e3511ad4faea82cf830b712346a7c3fceb6c52b6f80aa540  ./libpqcrystals_dilithium2_ref.so
+29d80601a191f3134154f3cc7315bad4b892c271cedf1a55365fe08b59214396  ./libpqcrystals_dilithium3_ref.so
+f895099171d7d7090e8f8aee271e017d9c55614bab2de07dfe72129665e45183  ./libpqcrystals_dilithium5_ref.so
+78e0d0dae7815fe8d58f288cf5ba7173391ea9b52c17378cf02f38c8097aed9c  ./libpqcrystals_fips202_ref.so
+60ea03c586a9210fddc1b00a3b7a33d3bd1e5878a9aa673a3e099cedb57926dd  ./nistkat/PQCgenKAT_sign.c
+6827d2f6861ff6fbe7e9176f5db2a264ec35095749dd294d66da6c0d47684f38  ./nistkat/PQCgenKAT_sign2
+804df29914bf778d86ff8312b558e3c63c4edf08afd9152afeb9ad5c306b203b  ./test/test_dilithium.c
+e1187499d2fd9d157d92ed8e9b07ebddd2e3c0ec74c5f908d23499f13543e287  ./test/test_dilithium2
+a36e2675e51d915a9076d225aded064ef195481dc496df4b7c7161bc998486a2  ./test/test_dilithium3
+3ab58fd9335a923e5188ff0b450d0f0ab0e5ae6627192d1104d7f1dc122e5c69  ./test/test_dilithium5
+ed92e5626510e74a12cb18e161475f5648e74dbad977bd0d9518256ad3659ae5  ./test/test_mul
+9385a57eb68a35dc100891596f98a6596abd67dc4777ed93e49d0405ddeb30af  ./test/test_mul.c
+9c7e1c0bada11b5a19c7b31c782eadb1b067822a4410ba07b0de0d231baf2f47  ./test/test_speed.c
+07260916621ae3df34ac8ac5a967075cff3c32cc2e212df6f5c0904718be4dff  ./test/test_speed2
+b6219f607d9b6af667e37a4be1f5dcead7072a4e58ea01f70bee9ff5eac20e9f  ./test/test_speed3
+5d0085710e82f08235fc82a2d413c2643a267b501e21e3dd553641df4e8b3a58  ./test/test_speed5
+0de027a30c9395511a658bbf91bbd14177ec5e31e9c50bafd9c1a6d2f02403a9  ./test/test_vectors.c
+35f83136fb0b86009de2fbf1a902b0a51832424b915d08ba1f69dd936a22335a  ./test/test_vectors2
+dd1c2a747618c0b32c4ec9f192dad5d1ed9ed213d65c472aad2572d3c1b8eff7  ./test/test_vectors3
+b30e10b684e41b2c1c5e60fa2256055768ec0e6e5648abe088ff276e76b1c47f  ./test/test_vectors5

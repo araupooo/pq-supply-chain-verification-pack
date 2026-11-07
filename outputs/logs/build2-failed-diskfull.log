@@ -1,0 +1,1511 @@
+=== liboqs build ===
+start_utc: 2026-11-07T16:51:34Z
+host: Linux htch-runtime 7.0.0-43-generic #1 SMP PREEMPT_DYNAMIC Fri Oct 23 11:56:57 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+cmake: cmake version 3.28.3
+git: git version 2.43.0
+workdir: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2
+SOURCE_DATE_EPOCH=<unset>
+CFLAGS=<unset> CXXFLAGS=<unset>
+=== clone ===
+Cloning into '/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs'...
+Note: switching to '5a1a854b0dc9f2141bdc771c555ee60c37950183'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  55% (3684/6667)Updating files:  56% (3734/6667)Updating files:  57% (3801/6667)Updating files:  58% (3867/6667)Updating files:  59% (3934/6667)Updating files:  60% (4001/6667)Updating files:  61% (4067/6667)Updating files:  62% (4134/6667)Updating files:  63% (4201/6667)Updating files:  64% (4267/6667)Updating files:  65% (4334/6667)Updating files:  66% (4401/6667)Updating files:  67% (4467/6667)Updating files:  68% (4534/6667)Updating files:  69% (4601/6667)Updating files:  70% (4667/6667)Updating files:  71% (4734/6667)Updating files:  72% (4801/6667)Updating files:  73% (4867/6667)Updating files:  74% (4934/6667)Updating files:  75% (5001/6667)Updating files:  76% (5067/6667)Updating files:  77% (5134/6667)Updating files:  78% (5201/6667)Updating files:  79% (5267/6667)Updating files:  80% (5334/6667)Updating files:  81% (5401/6667)Updating files:  82% (5467/6667)Updating files:  83% (5534/6667)Updating files:  84% (5601/6667)Updating files:  85% (5667/6667)Updating files:  86% (5734/6667)Updating files:  87% (5801/6667)Updating files:  88% (5867/6667)Updating files:  89% (5934/6667)Updating files:  90% (6001/6667)Updating files:  91% (6067/6667)Updating files:  92% (6134/6667)Updating files:  93% (6201/6667)Updating files:  93% (6248/6667)Updating files:  94% (6267/6667)Updating files:  95% (6334/6667)Updating files:  96% (6401/6667)Updating files:  97% (6467/6667)Updating files:  98% (6534/6667)Updating files:  99% (6601/6667)Updating files: 100% (6667/6667)Updating files: 100% (6667/6667), done.
+HEAD: 5a1a854b0dc9f2141bdc771c555ee60c37950183
+5a1a854b0dc9f2141bdc771c555ee60c37950183 2026-07-09 10:28:37 -0400 0.16.0 release (#2491)
+=== configure ===
+-- The C compiler identification is GNU 13.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- OQS Testing: Pytest parallel workers set to 'auto'
+-- CMAKE_BUILD_TYPE=Release
+-- Performing Test CC_SUPPORTS_WA_NOEXECSTACK
+-- Performing Test CC_SUPPORTS_WA_NOEXECSTACK - Success
+-- Performing Test LD_SUPPORTS_WL_Z_NOEXECSTACK
+-- Performing Test LD_SUPPORTS_WL_Z_NOEXECSTACK - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Alg enablement unchanged
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found suitable version "3.0.13", minimum required is "1.1.1")  
+-- Looking for aligned_alloc
+-- Looking for aligned_alloc - found
+-- Looking for posix_memalign
+-- Looking for posix_memalign - found
+-- Looking for memalign
+-- Looking for memalign - found
+-- Looking for explicit_bzero
+-- Looking for explicit_bzero - found
+-- Looking for explicit_memset
+-- Looking for explicit_memset - not found
+-- Looking for memset_s
+-- Looking for memset_s - not found
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Configuring done (2.8s)
+-- Generating done (2.2s)
+-- Build files have been written to: /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs/build
+=== build ===
+[  1%] Building C object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_serial.dir/KeccakP-1600times4/serial/KeccakP-1600-times4-on1.c.o
+[  1%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha2_256.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/aes/aes_impl.c.o
+[  2%] Building C object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_plain64.dir/KeccakP-1600/plain-64bits/KeccakP-1600-opt64.c.o
+[  2%] Built target xkcp_low_keccakp_1600times4_serial
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha2_512.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/aes/aes_c.c.o
+[  2%] Building ASM object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600_avx2.dir/KeccakP-1600/avx2/KeccakP-1600-AVX2.S.o
+[  2%] Built target xkcp_low_keccakp_1600_avx2
+[  2%] Building C object src/common/sha3/xkcp_low/CMakeFiles/xkcp_low_keccakp_1600times4_avx2.dir/KeccakP-1600times4/avx2/KeccakP-1600-times4-SIMD256.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha3_api.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/sha3_f1600.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_dsa.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/aes/aes128_ni.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_prehash.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/aes/aes256_ni.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_sha2.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/slh_dsa_c/slh_shake.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/aes/aes.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_128f.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/sha2/sha2_ossl.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_128s.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_192f.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/sha2/sha2.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_192s.c.o
+[  2%] Building C object src/common/CMakeFiles/common.dir/sha3/xkcp_sha3.c.o
+[  2%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_256f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_sha2_256s.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/sha3/xkcp_sha3x4.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_128f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_128s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_192f.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/sha3/avx512vl_sha3.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/sha3/avx512vl_sha3x4.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_192s.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/sha3/sha3.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_256f.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/sha3/sha3x4.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_224/slh_dsa_sha2_224_prehash_shake_256s.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/ossl_helpers.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_128f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_128s.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/common.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_192f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_192s.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/pqclean_shims/fips202.c.o
+[  3%] Building C object src/common/CMakeFiles/common.dir/pqclean_shims/fips202x4.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_256f.c.o
+[  3%] Built target xkcp_low_keccakp_1600_plain64
+[  3%] Building ASM object src/common/sha3/avx512vl_low/CMakeFiles/sha3_avx512vl_low.dir/KeccakP-1600-AVX512VL.S.o
+[  3%] Building ASM object src/common/sha3/avx512vl_low/CMakeFiles/sha3_avx512vl_low.dir/SHA3-AVX512VL.S.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_sha2_256s.c.o
+[  3%] Building ASM object src/common/sha3/avx512vl_low/CMakeFiles/sha3_avx512vl_low.dir/KeccakP-1600-times4-AVX512VL.S.o
+[  3%] Building ASM object src/common/sha3/avx512vl_low/CMakeFiles/sha3_avx512vl_low.dir/SHA3-times4-AVX512VL.S.o
+[  3%] Built target sha3_avx512vl_low
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_128f.c.o
+[  3%] Building C object src/kem/bike/CMakeFiles/kem_bike.dir/kem_bike.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_128s.c.o
+[  3%] Built target kem_bike
+[  3%] Building C object src/common/CMakeFiles/common.dir/rand/rand.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_192f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_192s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_256f.c.o
+[  3%] Built target common
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_256/slh_dsa_sha2_256_prehash_shake_256s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_128f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_128s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_192f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_192s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_256f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_sha2_256s.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_128f.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_128s.c.o
+[  3%] Built target xkcp_low_keccakp_1600times4_avx2
+[  3%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/decode.c.o
+[  3%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/decode.c.o
+[  3%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_192s.c.o
+[  4%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_192f.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/decode_portable.c.o
+[  4%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_256f.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/error.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/decode.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_inv.c.o
+[  4%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_384/slh_dsa_sha2_384_prehash_shake_256s.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/decode_portable.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_ksqr_portable.c.o
+[  4%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_128f.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/error.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/decode_portable.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_inv.c.o
+[  4%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul.c.o
+[  4%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_128s.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_ksqr_portable.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/error.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_192f.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_inv.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_base_portable.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_192s.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_ksqr_portable.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_256f.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_portable.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_sha2_256s.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_base_portable.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_base_portable.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_128f.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_portable.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_portable.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_128s.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_192f.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/kem.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_192s.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/shake_prf.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_256f.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/sampling.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/sampling_portable.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512/slh_dsa_sha2_512_prehash_shake_256s.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/kem.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/utilities.c.o
+[  5%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/decode_avx2.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_128f.c.o
+[  5%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_128s.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/kem.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/shake_prf.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_192f.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/sampling.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/shake_prf.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_192s.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/sampling.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_256f.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/sampling_portable.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_sha2_256s.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/utilities.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/sampling_portable.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/decode_avx2.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/utilities.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_128f.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_ksqr_avx2.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/decode_avx2.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_128s.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_192f.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_192s.c.o
+[  6%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_avx2.c.o
+[  6%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_256f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_224/slh_dsa_sha2_512_224_prehash_shake_256s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_ksqr_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_128f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_ksqr_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_128s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_192f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/sampling_avx2.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_192s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_256f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_sha2_256s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_128f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_128s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/decode_avx512.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/sampling_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_192f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/sampling_avx2.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_192s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_ksqr_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_256f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha2_512_256/slh_dsa_sha2_512_256_prehash_shake_256s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_128f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/decode_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_128s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/decode_avx512.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_192f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_ksqr_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_192s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_256f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_ksqr_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_sha2_256s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_avx512.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/sampling_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_128f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_128s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_192f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_192s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_avx512.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/sampling_avx512.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_base_pclmul.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_256f.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_224/slh_dsa_sha3_224_prehash_shake_256s.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_128f.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/sampling_avx512.c.o
+[  7%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_128s.c.o
+[  7%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_base_pclmul.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_192f.c.o
+[  8%] Building C object src/kem/bike/CMakeFiles/bike_l1.dir/additional_r4/gf2x_mul_base_vpclmul.c.o
+[  8%] Built target bike_l1
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_192s.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem640aes.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo640aes.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_256f.c.o
+[  8%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_base_pclmul.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_sha2_256s.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_128f.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_128s.c.o
+[  8%] Building C object src/kem/bike/CMakeFiles/bike_l5.dir/additional_r4/gf2x_mul_base_vpclmul.c.o
+[  8%] Building C object src/kem/bike/CMakeFiles/bike_l3.dir/additional_r4/gf2x_mul_base_vpclmul.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_192f.c.o
+[  8%] Built target bike_l5
+[  8%] Built target bike_l3
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo640aes_avx2.c.o
+[  8%] Building C object src/kem/ntruprime/CMakeFiles/ntruprime_sntrup761_openssh.dir/kem_ntruprime_sntrup761.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_192s.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem640shake.c.o
+[  8%] Building C object src/kem/ntruprime/CMakeFiles/ntruprime_sntrup761_openssh.dir/sntrup761_openssh/sntrup761.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_256f.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo640shake.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_256/slh_dsa_sha3_256_prehash_shake_256s.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_128f.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_128s.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo976aes_avx2.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_192f.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem976aes.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo976aes.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_192s.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_256f.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_sha2_256s.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_128f.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_128s.c.o
+[  8%] Built target ntruprime_sntrup761_openssh
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_192f.c.o
+[  8%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/kem_ntru_hps2048509.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_192s.c.o
+[  8%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/cmov.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem976shake.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_256f.c.o
+[  8%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/crypto_sort_int32.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo976shake.c.o
+[  8%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo1344aes_avx2.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_384/slh_dsa_sha3_384_prehash_shake_256s.c.o
+[  8%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/kem.c.o
+[  8%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_128f.c.o
+[  8%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/owcpa.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/pack3.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/packq.c.o
+[  9%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_128s.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly.c.o
+[  9%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_192f.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly_lift.c.o
+[  9%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_192s.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly_mod.c.o
+[  9%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo640shake_avx2.c.o
+[  9%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem1344aes.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly_r2_inv.c.o
+[  9%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_256f.c.o
+[  9%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo1344aes.c.o
+[  9%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly_rq_mul.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_sha2_256s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_128f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_128s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_192f.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo976shake_avx2.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_192s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_256f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_sha3_512/slh_dsa_sha3_512_prehash_shake_256s.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_frodokem1344shake.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_128f.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/frodo/frodo1344shake.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_128s.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/frodo/frodo1344shake_avx2.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_192f.c.o
+[ 10%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/poly_s3_inv.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_192s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_256f.c.o
+[ 10%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/sample.c.o
+[ 10%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_clean.dir/pqclean_ntruhps2048509_clean/sample_iid.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_sha2_256s.c.o
+[ 10%] Built target ntru_hps2048509_clean
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_128f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_128s.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem640aes.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_192f.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo640aes.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_192s.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem640shake.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo640aes_avx2.c.o
+[ 10%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo976aes_avx2.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_256f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_128/slh_dsa_shake_128_prehash_shake_256s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_128f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_128s.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_192f.c.o
+[ 10%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_192s.c.o
+[ 11%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo640shake.c.o
+[ 11%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_256f.c.o
+[ 11%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo1344aes_avx2.c.o
+[ 11%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo640shake_avx2.c.o
+[ 11%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_sha2_256s.c.o
+[ 11%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_128f.c.o
+[ 11%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_128s.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_192f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_192s.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_256f.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem976aes.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/cmov.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/prehash_shake_256/slh_dsa_shake_256_prehash_shake_256s.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo976aes.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo976shake_avx2.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/crypto_sort_int32.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_128f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_128s.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_192f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_192s.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem976shake.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_256f.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo976shake.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/kem.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_sha2_256s.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_128f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_128s.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem_avx2.dir/external/efrodo/efrodo1344shake_avx2.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_192f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_192s.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_256f.c.o
+[ 12%] Building C object src/sig/slh_dsa/CMakeFiles/slh_dsa_c.dir/wrappers/pure/slh_dsa_pure_shake_256s.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/owcpa.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem1344aes.c.o
+[ 12%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo1344aes.c.o
+[ 12%] Built target slh_dsa_c
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/kem_ntru_hps2048677.c.o
+[ 12%] Built target frodokem_avx2
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/cmov.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/crypto_sort_int32.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/cmov.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/crypto_sort_int32.c.o
+[ 12%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/kem.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/pack3.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/owcpa.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/pack3.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/packq.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly_lift.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly_mod.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly_r2_inv.c.o
+[ 13%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/kem_efrodokem1344shake.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/packq.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/kem.c.o
+[ 13%] Building C object src/kem/frodokem/CMakeFiles/frodokem.dir/external/efrodo/efrodo1344shake.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly_rq_mul.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/owcpa.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly.c.o
+[ 13%] Built target frodokem
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/kem_ntru_hps4096821.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/cmov.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/poly_s3_inv.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/pack3.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/crypto_sort_int32.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/sample.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_clean.dir/pqclean_ntruhps2048677_clean/sample_iid.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/kem.c.o
+[ 13%] Built target ntru_hps2048677_clean
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_lift.c.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_mod_3_Phi_n.s.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/owcpa.c.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_mod_q_Phi_n.s.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_r2_inv.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/pack3.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/packq.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/packq.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly_lift.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly_mod.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly_r2_inv.c.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_r2_mul.s.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly_rq_mul.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/cmov.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/crypto_sort_int32.c.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_rq_mul.s.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_rq_to_s3.s.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/poly_s3_inv.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_lift.c.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_mod_3_Phi_n.s.o
+[ 13%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_mod_q_Phi_n.s.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_r2_inv.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/sample.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/kem.c.o
+[ 13%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/poly_s3_inv.c.o
+[ 14%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/sample.c.o
+[ 14%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_clean.dir/pqclean_ntruhps4096821_clean/sample_iid.c.o
+[ 14%] Built target ntru_hps4096821_clean
+[ 14%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/kem_ntru_hps40961229.c.o
+[ 14%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_r2_mul.s.o
+[ 14%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_rq_mul.s.o
+[ 14%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_rq_to_s3.s.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/cmov.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/sample_iid.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/poly_s3_inv.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/crypto_sort_int32.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/owcpa.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/kem.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/owcpa.c.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_126_509_shufbytes.s.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_15_509_shufbytes.s.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_1_509_patience.s.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_252_509_shufbytes.s.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/pack3.c.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_30_509_shufbytes.s.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/packq.c.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_3_509_patience.s.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_63_509_shufbytes.s.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/square_6_509_patience.s.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly.c.o
+[ 15%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048509_avx2.dir/pqclean_ntruhps2048509_avx2/vec32_sample_iid.s.o
+[ 15%] Built target ntru_hps2048509_avx2
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly_lift.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/pack3.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/kem_ntru_hrss701.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly_mod.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly_r2_inv.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/cmov.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly_rq_mul.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/kem.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/sample.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/owcpa.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/pack3.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/packq.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/packq.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly_lift.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/poly_s3_inv.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/sample_iid.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly_mod.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly_r2_inv.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/sample.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly_rq_mul.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps40961229_clean.dir/pqclean_ntruhps40961229_clean/sample_iid.c.o
+[ 15%] Built target ntru_hps40961229_clean
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/cmov.c.o
+[ 15%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/kem.c.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_10_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_168_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_1_677_patience.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_21_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_2_677_patience.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_336_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_3_677_patience.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_42_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_5_677_patience.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/square_84_677_shufbytes.s.o
+[ 16%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps2048677_avx2.dir/pqclean_ntruhps2048677_avx2/vec32_sample_iid.s.o
+[ 16%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/owcpa.c.o
+[ 16%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_lift.c.o
+[ 16%] Built target ntru_hps2048677_avx2
+[ 16%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/kem_ntru_hrss1373.c.o
+[ 16%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/cmov.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/poly_s3_inv.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/kem.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/owcpa.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/sample.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/pack3.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_clean.dir/pqclean_ntruhrss701_clean/sample_iid.c.o
+[ 17%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_mod_3_Phi_n.s.o
+[ 17%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_mod_q_Phi_n.s.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/packq.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_r2_inv.c.o
+[ 17%] Built target ntru_hrss701_clean
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly.c.o
+[ 17%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/kem_classic_mceliece_348864.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly_lift.c.o
+[ 17%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/aes256ctr.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/pack3.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly_mod.c.o
+[ 17%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/benes.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly_r2_inv.c.o
+[ 17%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly_rq_mul.c.o
+[ 17%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/bm.c.o
+[ 17%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/controlbits.c.o
+[ 17%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_r2_mul.s.o
+[ 17%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_rq_mul.s.o
+[ 18%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_rq_to_s3.s.o
+[ 18%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/poly_s3_inv.c.o
+[ 18%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/packq.c.o
+[ 18%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/crypto_int16.c.o
+[ 18%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/crypto_int32.c.o
+[ 18%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/crypto_uint16.c.o
+[ 18%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly.c.o
+[ 18%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/crypto_uint32.c.o
+[ 18%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/crypto_uint64.c.o
+[ 18%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/poly_s3_inv.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/decrypt.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/encrypt.c.o
+[ 19%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/sample.c.o
+[ 19%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss1373_clean.dir/pqclean_ntruhrss1373_clean/sample_iid.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/gf.c.o
+[ 19%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/sample.c.o
+[ 19%] Built target ntru_hrss1373_clean
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/aes256ctr.c.o
+[ 19%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_lift.s.o
+[ 19%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_mod_3_Phi_n.s.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/operations.c.o
+[ 19%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_mod_q_Phi_n.s.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/benes.c.o
+[ 19%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_r2_inv.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/pk_gen.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/root.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/sk_gen.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/synd.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/transpose.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_clean.dir/pqclean_mceliece348864_clean/util.c.o
+[ 19%] Built target classic_mceliece_348864_clean
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/bm.c.o
+[ 19%] Building C object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/sample_iid.c.o
+[ 19%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/kem_classic_mceliece_348864f.c.o
+[ 19%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_r2_mul.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_rq_mul.s.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/aes256ctr.c.o
+[ 20%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/consts.S.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_rq_to_s3.s.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/controlbits.c.o
+[ 20%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/poly_s3_inv.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/benes.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/crypto_int16.c.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_102_821_shufbytes.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_12_821_shufbytes.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_1_821_patience.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_204_821_shufbytes.s.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/crypto_int32.c.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_24_821_shufbytes.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_3_821_patience.s.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/bm.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/crypto_uint16.c.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_408_821_shufbytes.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_51_821_shufbytes.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/square_6_821_patience.s.o
+[ 20%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hps4096821_avx2.dir/pqclean_ntruhps4096821_avx2/vec32_sample_iid.s.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/crypto_uint32.c.o
+[ 20%] Built target ntru_hps4096821_avx2
+[ 20%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/sample.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/controlbits.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/crypto_uint64.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/decrypt.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/crypto_int16.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/crypto_int32.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/crypto_uint16.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/crypto_uint32.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/crypto_uint64.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/encrypt.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/decrypt.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/gf.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/aes256ctr.c.o
+[ 20%] Building C object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/sample_iid.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/benes.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/operations.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/encrypt.c.o
+[ 20%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/pk_gen.c.o
+[ 21%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/fft.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/root.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/bm.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/sk_gen.c.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_12_701_shufbytes.s.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/synd.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/transpose.c.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_15_701_shufbytes.s.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_168_701_shufbytes.s.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_1_701_patience.s.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/consts.S.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_27_701_shufbytes.s.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_336_701_shufbytes.s.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/controlbits.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_clean.dir/pqclean_mceliece348864f_clean/util.c.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_3_701_patience.s.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_42_701_shufbytes.s.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_6_701_patience.s.o
+[ 22%] Built target classic_mceliece_348864f_clean
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/fft_tr.c.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/square_84_701_shufbytes.s.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/kem_classic_mceliece_460896.c.o
+[ 22%] Building ASM object src/kem/ntru/CMakeFiles/ntru_hrss701_avx2.dir/pqclean_ntruhrss701_avx2/vec32_sample_iid.s.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/crypto_int16.c.o
+[ 22%] Built target ntru_hrss701_avx2
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/crypto_int32.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/aes256ctr.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/aes256ctr.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/crypto_uint16.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/benes.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/benes.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/crypto_uint32.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/crypto_uint64.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/decrypt.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/gf.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/bm.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/encrypt.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/operations.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/controlbits.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/pk_gen.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/fft.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/bm.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/crypto_int16.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/crypto_int32.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/crypto_uint16.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/crypto_uint32.c.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/consts.S.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/controlbits.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/crypto_uint64.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/crypto_int16.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/decrypt.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/crypto_int32.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/sk_gen.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/crypto_uint16.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/encrypt.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/crypto_uint32.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/crypto_uint64.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/gf.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/fft_tr.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/decrypt.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/operations.c.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/syndrome_asm.S.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/pk_gen.c.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/transpose_64x256_sp_asm.S.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/transpose_64x64_asm.S.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/update_asm.S.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec.c.o
+[ 22%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec128_mul_asm.S.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec256.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/root.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/sk_gen.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/synd.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/transpose.c.o
+[ 22%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/encrypt.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_clean.dir/pqclean_mceliece460896_clean/util.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/gf.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/fft.c.o
+[ 23%] Built target classic_mceliece_460896_clean
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/operations.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/kem_classic_mceliece_460896f.c.o
+[ 23%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec256_mul_asm.S.o
+[ 23%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec_mul_asm.S.o
+[ 23%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec_mul_sp_asm.S.o
+[ 23%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864_avx2.dir/pqclean_mceliece348864_avx2/vec_reduce_asm.S.o
+[ 23%] Built target classic_mceliece_348864_avx2
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/pk_gen.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/aes256ctr.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/aes256ctr.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/benes.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/benes.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/bm.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/controlbits.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/fft_tr.c.o
+[ 23%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/bm.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/sk_gen.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/syndrome_asm.S.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/transpose_64x256_sp_asm.S.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/consts.S.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/transpose_64x64_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/controlbits.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/update_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec128_mul_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/crypto_int16.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec256.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/crypto_int32.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/crypto_uint16.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/crypto_int16.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/crypto_int32.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/crypto_uint32.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/crypto_uint64.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/crypto_uint16.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/gf.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/decrypt.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/crypto_uint32.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/operations.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec256_mul_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/encrypt.c.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/crypto_uint64.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec_mul_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/pk_gen.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec_mul_sp_asm.S.o
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/decrypt.c.o
+[ 24%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_348864f_avx2.dir/pqclean_mceliece348864f_avx2/vec_reduce_asm.S.o
+[ 24%] Built target classic_mceliece_348864f_avx2
+[ 24%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/gf.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/kem_classic_mceliece_6688128.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/aes256ctr.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/operations.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/benes.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/encrypt.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/pk_gen.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/fft.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/bm.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/sk_gen.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/controlbits.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/root.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/sk_gen.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/synd.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/transpose.c.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_clean.dir/pqclean_mceliece460896f_clean/util.c.o
+[ 25%] Built target classic_mceliece_460896f_clean
+[ 25%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/syndrome_asm.S.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/crypto_int16.c.o
+[ 25%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/transpose_64x128_sp_asm.S.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/aes256ctr.c.o
+[ 25%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/transpose_64x256_sp_asm.S.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/crypto_int32.c.o
+[ 25%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/transpose_64x64_asm.S.o
+[ 25%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/benes.c.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/update_asm.S.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/crypto_uint16.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec128.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/crypto_uint32.c.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec128_mul_asm.S.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/fft_tr.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/crypto_uint64.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec256.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/decrypt.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/encrypt.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/gf.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/bm.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/operations.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/pk_gen.c.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec256_ama_asm.S.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec256_maa_asm.S.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec256_mul_asm.S.o
+[ 26%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896_avx2.dir/pqclean_mceliece460896_avx2/vec_reduce_asm.S.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/root.c.o
+[ 26%] Built target classic_mceliece_460896_avx2
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/kem_classic_mceliece_6688128f.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/sk_gen.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/gf.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/aes256ctr.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/operations.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/benes.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/synd.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/transpose.c.o
+[ 26%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/pk_gen.c.o
+[ 27%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/consts.S.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/controlbits.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_clean.dir/pqclean_mceliece6688128_clean/util.c.o
+[ 27%] Built target classic_mceliece_6688128_clean
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/aes256ctr.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/benes.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/crypto_int16.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/crypto_int32.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/bm.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/crypto_uint16.c.o
+[ 27%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/crypto_uint32.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/controlbits.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/crypto_uint64.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/sk_gen.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/decrypt.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/bm.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/crypto_int16.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/crypto_int32.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/crypto_uint16.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/crypto_uint32.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/crypto_uint64.c.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/consts.S.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/controlbits.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/encrypt.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/decrypt.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/encrypt.c.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/fft.c.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/syndrome_asm.S.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/transpose_64x128_sp_asm.S.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/crypto_int16.c.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/transpose_64x256_sp_asm.S.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/gf.c.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/transpose_64x64_asm.S.o
+[ 28%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/crypto_int32.c.o
+[ 28%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/update_asm.S.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/crypto_uint16.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec128.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/crypto_uint32.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/crypto_uint64.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/operations.c.o
+[ 29%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec128_mul_asm.S.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/decrypt.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec256.c.o
+[ 29%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/pk_gen.c.o
+[ 30%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec256_ama_asm.S.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/root.c.o
+[ 30%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec256_maa_asm.S.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/sk_gen.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/encrypt.c.o
+[ 30%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec256_mul_asm.S.o
+[ 30%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_460896f_avx2.dir/pqclean_mceliece460896f_avx2/vec_reduce_asm.S.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/fft.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/synd.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/fft_tr.c.o
+[ 30%] Built target classic_mceliece_460896f_avx2
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/kem_classic_mceliece_6960119.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/transpose.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/aes256ctr.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_clean.dir/pqclean_mceliece6688128f_clean/util.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/benes.c.o
+[ 30%] Built target classic_mceliece_6688128f_clean
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/aes256ctr.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/benes.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/bm.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/controlbits.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/bm.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/gf.c.o
+[ 30%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/consts.S.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/fft_tr.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/controlbits.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/operations.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/crypto_int16.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/crypto_int32.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/pk_gen.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/crypto_uint16.c.o
+[ 30%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/crypto_int16.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/crypto_uint32.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/crypto_int32.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/crypto_uint64.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/crypto_uint16.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/decrypt.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/crypto_uint32.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/encrypt.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/crypto_uint64.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/decrypt.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/gf.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/gf.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/operations.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/operations.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/pk_gen.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/sk_gen.c.o
+[ 31%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/pk_gen.c.o
+[ 31%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/syndrome_asm.S.o
+[ 31%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/transpose_64x128_sp_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/encrypt.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/transpose_64x256_sp_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/root.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/transpose_64x64_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/sk_gen.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/update_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/fft.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec128.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/synd.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec128_mul_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec256.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/transpose.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_clean.dir/pqclean_mceliece6960119_clean/util.c.o
+[ 32%] Built target classic_mceliece_6960119_clean
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/sk_gen.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/syndrome_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/transpose_64x128_sp_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec256_ama_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/fft_tr.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec256_maa_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec256_mul_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128_avx2.dir/pqclean_mceliece6688128_avx2/vec_reduce_asm.S.o
+[ 32%] Built target classic_mceliece_6688128_avx2
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/kem_classic_mceliece_6960119f.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/aes256ctr.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/transpose_64x256_sp_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/benes.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/transpose_64x64_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/update_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec128.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/bm.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec128_mul_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec256.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/controlbits.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/aes256ctr.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/gf.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/benes.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/operations.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/pk_gen.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/crypto_int16.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec256_ama_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec256_maa_asm.S.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec256_mul_asm.S.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/crypto_int32.c.o
+[ 32%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6688128f_avx2.dir/pqclean_mceliece6688128f_avx2/vec_reduce_asm.S.o
+[ 32%] Built target classic_mceliece_6688128f_avx2
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/crypto_uint16.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/bm.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/kem_classic_mceliece_8192128.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/crypto_uint32.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/crypto_uint64.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/aes256ctr.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/decrypt.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/benes.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/encrypt.c.o
+[ 32%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/sk_gen.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/gf.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/operations.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/pk_gen.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/bm.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/controlbits.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/consts.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/controlbits.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/syndrome_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/root.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/transpose_64x128_sp_asm.S.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/transpose_64x256_sp_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/sk_gen.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/transpose_64x64_asm.S.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/update_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/crypto_int16.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec128.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/synd.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/transpose.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/crypto_int32.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/crypto_uint16.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_clean.dir/pqclean_mceliece6960119f_clean/util.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec128_mul_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/crypto_uint32.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec256.c.o
+[ 33%] Built target classic_mceliece_6960119f_clean
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/crypto_uint64.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec256_ama_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/crypto_int16.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/decrypt.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/aes256ctr.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/crypto_int32.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/benes.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/crypto_uint16.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/crypto_uint32.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/crypto_uint64.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/encrypt.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/decrypt.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/fft.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec256_maa_asm.S.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec256_mul_asm.S.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/encrypt.c.o
+[ 33%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119_avx2.dir/pqclean_mceliece6960119_avx2/vec_reduce_asm.S.o
+[ 33%] Built target classic_mceliece_6960119_avx2
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/gf.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/bm.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/operations.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/kem_classic_mceliece_8192128f.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/pk_gen.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/aes256ctr.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/benes.c.o
+[ 33%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/root.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/sk_gen.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/fft_tr.c.o
+[ 34%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/consts.S.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/synd.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/controlbits.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/transpose.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_clean.dir/pqclean_mceliece8192128_clean/util.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/bm.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/crypto_int16.c.o
+[ 34%] Built target classic_mceliece_8192128_clean
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/crypto_int32.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/gf.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/controlbits.c.o
+[ 34%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/crypto_uint16.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/operations.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/crypto_uint32.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/crypto_uint64.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/crypto_int16.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/decrypt.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/crypto_int32.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/aes256ctr.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/benes.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/crypto_uint16.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/pk_gen.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/crypto_uint32.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/crypto_uint64.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/encrypt.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/decrypt.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/encrypt.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/fft.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/gf.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/bm.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/operations.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/pk_gen.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/sk_gen.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/consts.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/controlbits.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/root.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/crypto_int16.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/sk_gen.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/crypto_int32.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/crypto_uint16.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/synd.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/crypto_uint32.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/transpose.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/syndrome_asm.S.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/transpose_64x128_sp_asm.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/fft_tr.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/crypto_uint64.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_clean.dir/pqclean_mceliece8192128f_clean/util.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/transpose_64x256_sp_asm.S.o
+[ 35%] Built target classic_mceliece_8192128f_clean
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/transpose_64x64_asm.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/decrypt.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/encrypt.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/update_asm.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec128.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/gf.c.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/kem_hqc_1.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec128_mul_asm.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec256.c.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/code.c.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/crypto_memset.c.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/fft.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/fft.c.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/gf.c.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/operations.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec256_ama_asm.S.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec256_maa_asm.S.o
+[ 35%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/gf2x.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec256_mul_asm.S.o
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/pk_gen.c.o
+[ 35%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_6960119f_avx2.dir/pqclean_mceliece6960119f_avx2/vec_reduce_asm.S.o
+[ 35%] Built target classic_mceliece_6960119f_avx2
+[ 35%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/fft_tr.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/hqc.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/kem.c.o
+[ 36%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/sk_gen.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/parsing.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/reed_muller.c.o
+[ 36%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/gf.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/reed_solomon.c.o
+[ 36%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/operations.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/kem_hqc_3.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/code.c.o
+[ 36%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/pk_gen.c.o
+[ 36%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/syndrome_asm.S.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/crypto_memset.c.o
+[ 36%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/symmetric.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/transpose_64x128_sp_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/fft.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/transpose_64x256_sp_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_1_ref.dir/pqc-hqc_hqc-1_ref/vector.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/transpose_64x64_asm.S.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/update_asm.S.o
+[ 37%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec128.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec128_mul_asm.S.o
+[ 37%] Built target hqc_1_ref
+[ 37%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec256.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/kem_hqc_5.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/code.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/gf.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/crypto_memset.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/fft.c.o
+[ 37%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/sk_gen.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/gf2x.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/gf.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec256_ama_asm.S.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec256_maa_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/hqc.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec256_mul_asm.S.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128_avx2.dir/pqclean_mceliece8192128_avx2/vec_reduce_asm.S.o
+[ 37%] Built target classic_mceliece_8192128_avx2
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/gf2x.c.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/kem.c.o
+[ 37%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/kem_kyber_512.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/syndrome_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/parsing.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/transpose_64x128_sp_asm.S.o
+[ 37%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/cbd.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/transpose_64x256_sp_asm.S.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/transpose_64x64_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/reed_muller.c.o
+[ 37%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/indcpa.c.o
+[ 37%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/update_asm.S.o
+[ 37%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/hqc.c.o
+[ 38%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec128.c.o
+[ 38%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/kem.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/kem.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/reed_solomon.c.o
+[ 39%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec128_mul_asm.S.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/ntt.c.o
+[ 39%] Building C object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec256.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/parsing.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/symmetric.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/reed_muller.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_3_ref.dir/pqc-hqc_hqc-3_ref/vector.c.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/poly.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/reed_solomon.c.o
+[ 39%] Built target hqc_3_ref
+[ 39%] Building ASM object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/basemul.S.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/cbd.c.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/polyvec.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/symmetric.c.o
+[ 39%] Building C object src/kem/hqc/CMakeFiles/hqc_5_ref.dir/pqc-hqc_hqc-5_ref/vector.c.o
+[ 39%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec256_ama_asm.S.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/reduce.c.o
+[ 39%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec256_maa_asm.S.o
+[ 39%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec256_mul_asm.S.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/symmetric-shake.c.o
+[ 39%] Building ASM object src/kem/classic_mceliece/CMakeFiles/classic_mceliece_8192128f_avx2.dir/pqclean_mceliece8192128f_avx2/vec_reduce_asm.S.o
+[ 39%] Built target classic_mceliece_8192128f_avx2
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/consts.c.o
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_512_ref.dir/pqcrystals-kyber_kyber512_ref/verify.c.o
+[ 39%] Built target kyber_512_ref
+[ 39%] Built target hqc_5_ref
+[ 39%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/kem_kyber_768.c.o
+[ 39%] Building ASM object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/basemul.S.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/cbd.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/kem_kyber_1024.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/cbd.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/indcpa.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/cbd.c.o
+[ 40%] Building ASM object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/fq.S.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/indcpa.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/indcpa.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/kem.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/ntt.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/poly.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/consts.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/kem.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/ntt.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/polyvec.c.o
+[ 40%] Building ASM object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/fq.S.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/indcpa.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/poly.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/reduce.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/symmetric-shake.c.o
+[ 40%] Building ASM object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/invntt.S.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_768_ref.dir/pqcrystals-kyber_kyber768_ref/verify.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/kem.c.o
+[ 40%] Built target kyber_768_ref
+[ 40%] Building ASM object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/basemul.S.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/cbd.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/polyvec.c.o
+[ 40%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/reduce.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/symmetric-shake.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_ref.dir/pqcrystals-kyber_kyber1024_ref/verify.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/consts.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/ntt.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/poly.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/invntt.S.o
+[ 41%] Built target kyber_1024_ref
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/kem.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/kem_ml_kem_512.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/compress.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/polyvec.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/fq.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/indcpa.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/debug.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/indcpa.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/ntt.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/poly.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/rejsample.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/invntt.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/kem.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/kem.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/polyvec.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/shuffle.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/symmetric-shake.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/ntt.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/poly.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_512_avx2.dir/pqcrystals-kyber_kyber512_avx2/verify.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/rejsample.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/poly.c.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/polyvec.c.o
+[ 41%] Built target kyber_512_avx2
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/compress.c.o
+[ 41%] Building ASM object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/shuffle.S.o
+[ 41%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/symmetric-shake.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/debug.c.o
+[ 41%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/indcpa.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/poly_k.c.o
+[ 42%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/rejsample.c.o
+[ 42%] Building C object src/kem/kyber/CMakeFiles/kyber_768_avx2.dir/pqcrystals-kyber_kyber768_avx2/verify.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/kem.c.o
+[ 42%] Building ASM object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/shuffle.S.o
+[ 42%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/symmetric-shake.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/sampling.c.o
+[ 42%] Built target kyber_768_avx2
+[ 42%] Building C object src/kem/kyber/CMakeFiles/kyber_1024_avx2.dir/pqcrystals-kyber_kyber1024_avx2/verify.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/compress_consts.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/consts.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/nttfrombytes_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/ntttobytes_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_compress_d10_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_ref.dir/mlkem-native_ml-kem-512_ref/mlkem/src/verify.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_compress_d11_avx2_asm.S.o
+[ 42%] Built target kyber_1024_avx2
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_compress_d4_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/kem_ml_kem_768.c.o
+[ 42%] Built target ml_kem_512_ref
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_compress_d5_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/kem_ml_kem_1024.c.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/compress.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d10_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d11_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/compress.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d4_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/compress.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d5_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/poly_mulcache_compute_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k2_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k3_avx2_asm.S.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k4_avx2_asm.S.o
+[ 42%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/debug.c.o
+[ 42%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/reduce_avx2_asm.S.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/rej_uniform_avx2_asm.S.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/rej_uniform_table.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/indcpa.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/debug.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/indcpa.c.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/native/x86_64/src/tomont_avx2_asm.S.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/poly.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/debug.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/indcpa.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/kem.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/kem.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/poly_k.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/kem.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/poly.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/compress_consts.c.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/consts.c.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 43%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/sampling.c.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/nttfrombytes_avx2_asm.S.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/ntttobytes_avx2_asm.S.o
+[ 43%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_compress_d10_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_compress_d11_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_compress_d4_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_compress_d5_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d10_avx2_asm.S.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/poly.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/poly_k.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d11_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d4_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d5_avx2_asm.S.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_512_x86_64.dir/mlkem-native_ml-kem-512_x86_64/mlkem/src/verify.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/poly_mulcache_compute_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k2_avx2_asm.S.o
+[ 44%] Built target ml_kem_512_x86_64
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k3_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k4_avx2_asm.S.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/compress.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/reduce_avx2_asm.S.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/rej_uniform_avx2_asm.S.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/rej_uniform_table.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/debug.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/native/x86_64/src/tomont_avx2_asm.S.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/poly.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/indcpa.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/sampling.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/poly_k.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/poly_k.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/kem.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/sampling.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_ref.dir/mlkem-native_ml-kem-1024_ref/mlkem/src/verify.c.o
+[ 44%] Built target ml_kem_1024_ref
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_ref.dir/mlkem-native_ml-kem-768_ref/mlkem/src/verify.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/sampling.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_768_x86_64.dir/mlkem-native_ml-kem-768_x86_64/mlkem/src/verify.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/compress_consts.c.o
+[ 44%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/consts.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/sig_ml_dsa_44.c.o
+[ 44%] Built target ml_kem_768_ref
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/ct.c.o
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/ct.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/debug.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/nttfrombytes_avx2_asm.S.o
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/debug.c.o
+[ 44%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/ntttobytes_avx2_asm.S.o
+[ 44%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/packing.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/consts.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_compress_d10_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_compress_d11_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 45%] Built target ml_kem_768_x86_64
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/poly.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_compress_d4_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/sig_ml_dsa_65.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_compress_d5_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d10_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l4_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d11_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l5_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d4_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/ct.c.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l7_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_decompress_d5_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/pointwise_avx2_asm.S.o
+[ 45%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_caddq_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/debug.c.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_chknorm_avx2.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/poly_mulcache_compute_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k2_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k3_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/packing.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/polyvec_basemul_acc_montgomery_cached_k4_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/reduce_avx2_asm.S.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/rej_uniform_avx2_asm.S.o
+[ 45%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/rej_uniform_table.c.o
+[ 45%] Building ASM object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/native/x86_64/src/tomont_avx2_asm.S.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/poly.c.o
+[ 45%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/poly.c.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/poly_kl.c.o
+[ 45%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_decompose_32_avx2.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_decompose_88_avx2.c.o
+[ 46%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/poly_k.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_32_avx2.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/poly_kl.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_88_avx2.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/polyvec.c.o
+[ 46%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/sampling.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/polyvec_lazy.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_ref.dir/mldsa-native_ml-dsa-44_ref/mldsa/src/sign.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_17_avx2.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/polyvec.c.o
+[ 46%] Building C object src/kem/ml_kem/CMakeFiles/ml_kem_1024_x86_64.dir/mlkem-native_ml-kem-1024_x86_64/mlkem/src/verify.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/polyvec_lazy.c.o
+[ 46%] Built target ml_kem_1024_x86_64
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/ct.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_ref.dir/mldsa-native_ml-dsa-65_ref/mldsa/src/sign.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/debug.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_19_avx2.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/consts.c.o
+[ 46%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/rej_uniform_avx2.c.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l4_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l5_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l7_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/pointwise_avx2_asm.S.o
+[ 47%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_caddq_avx2_asm.S.o
+[ 47%] Built target ml_dsa_44_ref
+[ 47%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_chknorm_avx2.c.o
+[ 47%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/sig_ml_dsa_87.c.o
+[ 47%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/ct.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/debug.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta2_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/packing.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/poly.c.o
+[ 48%] Built target ml_dsa_65_ref
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_decompose_32_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/ct.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/debug.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/consts.c.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/intt_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/ntt_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/nttunpack_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l4_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l5_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/pointwise_acc_l7_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/pointwise_avx2_asm.S.o
+[ 48%] Building ASM object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_caddq_avx2_asm.S.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta4_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_chknorm_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/native/x86_64/src/rej_uniform_table.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/packing.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_decompose_88_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/poly_kl.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_32_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/poly.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_decompose_32_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_88_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_17_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_decompose_88_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_19_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_32_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/poly_use_hint_88_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_17_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/polyz_unpack_19_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/poly_kl.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/rej_uniform_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/rej_uniform_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/polyvec.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/polyvec_lazy.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_ref.dir/mldsa-native_ml-dsa-87_ref/mldsa/src/sign.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta2_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta2_avx2.c.o
+[ 48%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta4_avx2.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/rej_uniform_eta4_avx2.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/native/x86_64/src/rej_uniform_table.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/packing.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/poly.c.o
+[ 49%] Built target ml_dsa_87_ref
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/native/x86_64/src/rej_uniform_table.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/sig_falcon_512.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/packing.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/poly_kl.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/polyvec.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/codec.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/poly.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/common.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/polyvec_lazy.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_44_x86_64.dir/mldsa-native_ml-dsa-44_x86_64/mldsa/src/sign.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/fft.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/fpr.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/poly_kl.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/polyvec.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/keygen.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/polyvec_lazy.c.o
+[ 49%] Built target ml_dsa_44_x86_64
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_87_x86_64.dir/mldsa-native_ml-dsa-87_x86_64/mldsa/src/sign.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/codec.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/polyvec.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/common.c.o
+[ 49%] Built target ml_dsa_87_x86_64
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/polyvec_lazy.c.o
+[ 49%] Building C object src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/sig_falcon_1024.c.o
+[ 49%] Building C object src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/sign.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/codec.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/fft.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/common.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/pqclean.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/fft.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/rng.c.o
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs/src/sig/falcon/pqclean_falcon-1024_clean/fft.c:699:1: fatal error: error writing to /tmp/ccmizmPF.s: No space left on device
+  699 | }
+      | ^
+compilation terminated.
+gmake[2]: *** [src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/build.make:118: src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/pqclean_falcon-1024_clean/fft.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:2882: src/sig/falcon/CMakeFiles/falcon_1024_clean.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/fpr.c.o
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs/src/sig/ml_dsa/mldsa-native_ml-dsa-65_x86_64/mldsa/src/sign.c:1638:1: fatal error: error writing to /tmp/ccX3VF1x.s: No space left on device
+ 1638 | }
+      | ^
+compilation terminated.
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs/src/sig/falcon/pqclean_falcon-512_clean/rng.c:188:1: fatal error: error closing /tmp/cciAu9zO.s: No space left on device
+  188 | }
+      | ^
+compilation terminated.
+gmake[2]: *** [src/sig/falcon/CMakeFiles/falcon_512_clean.dir/build.make:174: src/sig/falcon/CMakeFiles/falcon_512_clean.dir/pqclean_falcon-512_clean/rng.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:2830: src/sig/falcon/CMakeFiles/falcon_512_clean.dir/all] Error 2
+gmake[2]: *** [src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/build.make:446: src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/mldsa-native_ml-dsa-65_x86_64/mldsa/src/sign.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:2752: src/sig/ml_dsa/CMakeFiles/ml_dsa_65_x86_64.dir/all] Error 2
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/pqclean.c.o
+[ 50%] Building C object src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/keygen.c.o
+/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/liboqs/build2/liboqs/src/sig/falcon/pqclean_falcon-512_avx2/fft.c:1108:1: fatal error: error writing to /tmp/cc67u0Eb.s: No space left on device
+ 1108 | }
+      | ^
+compilation terminated.
+gmake[2]: *** [src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/build.make:104: src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/pqclean_falcon-512_avx2/fft.c.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:2856: src/sig/falcon/CMakeFiles/falcon_512_avx2.dir/all] Error 2
+gmake: *** [Makefile:156: all] Error 2

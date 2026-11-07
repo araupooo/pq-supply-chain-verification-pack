@@ -1,0 +1,69 @@
+=== BUILD START ===
+build_dir=build2
+2026-11-07T16:53:36Z start_utc
+2026-11-07 16:53:36 UTC
+--- toolchain ---
+go version go1.27.3 linux/amd64
+--- uname ---
+Linux htch-runtime 7.0.0-43-generic #1 SMP PREEMPT_DYNAMIC Fri Oct 23 11:56:57 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+--- env (fixed for this build) ---
+CGO_ENABLED=0
+GOFLAGS=-trimpath -buildvcs=false
+GOPROXY=off
+GOSUMDB=off
+GOFLAGS_EXTRA: -trimpath -buildvcs=false passed on command line as well
+GOCACHE=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/build2/gocache
+GOMODCACHE=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/build2/gomodcache
+GOPATH=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/build2/gopath
+GOTOOLCHAIN=local
+--- go env ---
+go1.27.3
+/usr/local/go
+/home/hatch/go
+/home/hatch/.cache/go-build
+/home/hatch/go/pkg/mod
+linux
+amd64
+1
+
+https://proxy.golang.org,direct
+sum.golang.org
+auto
+v1
+--- source hashes ---
+9d5ee30bb00204f62a32da902487cc72521ecd6478b451bb45a3963805234cd0  build2/main.go
+12178a05283d57a41286c2bafd062e2fd124cd8f9be9b2f94002e41f2cb2d5fb  build2/go.mod
+--- build command ---
+cd build2 && env CGO_ENABLED=0 GOFLAGS='-trimpath -buildvcs=false' GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local GOCACHE=$PWD/gocache GOMODCACHE=$PWD/gomodcache GOPATH=$PWD/gopath /usr/local/go/bin/go build -trimpath -buildvcs=false -o pqcheck .
+--- build output ---
+build_exit=0
+--- binary ---
+-rwxrwx--- 1 root nogroup 2968564 Nov  7 16:54 build2/pqcheck
+d81e1efa546db902d66b25fbee72e45827b493b0400a4f80f447ffcb20abab22  build2/pqcheck
+--- go version -m ---
+build2/pqcheck: go1.27.3
+	path	pqcheck
+	mod	pqcheck	(devel)	
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	-trimpath=true
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+--- run binary ---
+go-stdlib pqcheck (crypto/mlkem ML-KEM-768, crypto/mldsa ML-DSA-65)
+mlkem-768 encapsulation_key_bytes=1184 (const EncapsulationKeySize768=1184)
+mlkem-768 decapsulation_key_bytes=64
+mlkem-768 shared_key_bytes=32 (const SharedKeySize=32)
+mlkem-768 ciphertext_bytes=1088 (const CiphertextSize768=1088)
+mlkem-768 decapsulate_ok=true shared_key_match=true
+mldsa-65 params=ML-DSA-65 public_key_size=1952 signature_size=3309
+mldsa-65 public_key_bytes=1952 private_key_bytes=32
+mldsa-65 signature_bytes=3309
+mldsa-65 verify_ok=true
+mldsa-65 verify_tampered_rejected=true
+ALL CHECKS PASSED
+run_exit=0
+2026-11-07T16:54:33Z end_utc
+=== BUILD END ===
