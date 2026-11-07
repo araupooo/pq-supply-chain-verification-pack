@@ -1,0 +1,10 @@
+crate: ml-kem 0.3.4 (RustCrypto/KEMs, tag ml-kem/v0.3.4)
+parameter set: ML-KEM-768 (FIPS 203)
+encapsulation_key_bytes: 1184
+decapsulation_key_seed_bytes: 64
+decapsulation_key_expanded_bytes: 2400
+ciphertext_bytes: 1088
+shared_secret_bytes: 32
+shared_secrets_match: true
+expected: ek=1184 dk_seed=64 dk_expanded=2400 ct=1088 ss=32
+RESULT: ML-KEM-768 round-trip OK

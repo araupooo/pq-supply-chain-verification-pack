@@ -1,0 +1,34 @@
+=== STDLIB REBUILD stdbuild2 START ===
+2026-11-07T16:59:54Z start_utc
+go version go1.27.3 linux/amd64
+GOCACHE=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/stdbuild2/gocache GOPATH=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/stdbuild2/gopath
+command: env CGO_ENABLED=0 GOFLAGS='-trimpath -buildvcs=false' GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local GOCACHE=$PWD/stdbuild2/gocache GOPATH=$PWD/stdbuild2/gopath go build -a std
+expvar: write /tmp/go-build308371756/b229/importcfg: no space left on device
+# testing/iotest
+compile: writing output: write $WORK/b363/_pkg_.a: no space left on device
+net/http/cgi: write /tmp/go-build308371756/b338/importcfg: no space left on device
+net/http/cookiejar: write /tmp/go-build308371756/b339/importcfg: no space left on device
+# testing/quick
+compile: writing output: write $WORK/b365/_pkg_.a: no space left on device
+net/http/httputil: write /tmp/go-build308371756/b343/importcfg: no space left on device
+net/http/pprof: write /tmp/go-build308371756/b344/importcfg: no space left on device
+net/rpc: write /tmp/go-build308371756/b348/importcfg: no space left on device
+testing/slogtest: write /tmp/go-build308371756/b366/importcfg: no space left on device
+testing/synctest: write /tmp/go-build308371756/b367/importcfg: no space left on device
+time/tzdata: write /tmp/go-build308371756/b368/importcfg: no space left on device
+vendor/golang.org/x/crypto/hkdf: write /tmp/go-build308371756/b369/importcfg: no space left on device
+vendor/golang.org/x/net/internal/httpcommon: write /tmp/go-build308371756/b372/importcfg: no space left on device
+vendor/golang.org/x/net/internal/quic/quicwire: write /tmp/go-build308371756/b374/importcfg: no space left on device
+vendor/golang.org/x/net/nettest: write /tmp/go-build308371756/b375/importcfg: no space left on device
+# testing/internal/testdeps
+compile: writing output: write $WORK/b364/_pkg_.a: no space left on device
+# internal/trace/traceviewer
+compile: writing output: write $WORK/b328/_pkg_.a: no space left on device
+# net/http/httptest
+compile: writing output: write $WORK/b341/_pkg_.a: no space left on device
+go_build_a_std_exit=1
+--- cache manifest (relative paths + sha256, sorted) ---
+2535 stdbuild2-cache-manifest.txt
+91e01ecdc5fb692e5069f35c47404fcd91e953e3520e876c19b22fbb566dead7  stdbuild2-cache-manifest.txt
+2026-11-07T17:03:12Z end_utc
+=== STDLIB REBUILD stdbuild2 END ===

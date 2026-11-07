@@ -1,0 +1,11 @@
+=== STDLIB REBUILD stdbuild1 START ===
+2026-11-07T16:54:43Z start_utc
+go version go1.27.3 linux/amd64
+GOCACHE=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/stdbuild1/gocache GOPATH=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/go-stdlib/stdbuild1/gopath
+command: env CGO_ENABLED=0 GOFLAGS='-trimpath -buildvcs=false' GOPROXY=off GOSUMDB=off GOTOOLCHAIN=local GOCACHE=$PWD/stdbuild1/gocache GOPATH=$PWD/stdbuild1/gopath go build -a std
+go_build_a_std_exit=0
+--- cache manifest (relative paths + sha256, sorted) ---
+2619 stdbuild1-cache-manifest.txt
+b2bf60e9e052e3b8f0c45e3ca65022a6013ad3b2e3b8c63fc56bcbccab12d820  stdbuild1-cache-manifest.txt
+2026-11-07T16:58:02Z end_utc
+=== STDLIB REBUILD stdbuild1 END ===
