@@ -1,0 +1,64 @@
+Cloning https://github.com/pq-crystals/kyber.git -> /home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-c0496161/targets/pq-crystals/kyber-r2
+=== checkout ===
+3edd5af5991927164edd4aacebfcbee00b8064e7
+3edd5af5991927164edd4aacebfcbee00b8064e7 2026-08-02T10:40:20+02:00 Fix suggested by Philipp Klaus Krause (issue #109) for systems with integers that have less than 32 bits
+=== build: make in ref/ ===
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=2 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/test_kyber.c -o test/test_kyber512
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=3 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/test_kyber.c -o test/test_kyber768
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=4 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/test_kyber.c -o test/test_kyber1024
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=2 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c test/test_vectors.c -o test/test_vectors512
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=3 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c test/test_vectors.c -o test/test_vectors768
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=4 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c test/test_vectors.c -o test/test_vectors1024
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=2 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/cpucycles.c test/speed_print.c test/test_speed.c -o test/test_speed512
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=3 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/cpucycles.c test/speed_print.c test/test_speed.c -o test/test_speed768
+cc -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=4 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c randombytes.c test/cpucycles.c test/speed_print.c test/test_speed.c -o test/test_speed1024
+mkdir -p lib
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=2 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c symmetric-shake.c -o lib/libpqcrystals_kyber512_ref.so
+mkdir -p lib
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=3 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c symmetric-shake.c -o lib/libpqcrystals_kyber768_ref.so
+mkdir -p lib
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack -DKYBER_K=4 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c symmetric-shake.c -o lib/libpqcrystals_kyber1024_ref.so
+mkdir -p lib
+cc -shared -fPIC -Wall -Wextra -Wpedantic -Wmissing-prototypes -Wredundant-decls -Wshadow -Wpointer-arith -O3 -fomit-frame-pointer -z noexecstack fips202.c -o lib/libpqcrystals_fips202_ref.so
+cc -Wno-unused-result -O3 -fomit-frame-pointer -DKYBER_K=2 -o nistkat/PQCgenKAT_kem512 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c nistkat/rng.c nistkat/PQCgenKAT_kem.c  -lcrypto
+cc -Wno-unused-result -O3 -fomit-frame-pointer -DKYBER_K=3 -o nistkat/PQCgenKAT_kem768 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c nistkat/rng.c nistkat/PQCgenKAT_kem.c  -lcrypto
+cc -Wno-unused-result -O3 -fomit-frame-pointer -DKYBER_K=4 -o nistkat/PQCgenKAT_kem1024 kem.c indcpa.c polyvec.c poly.c ntt.c cbd.c reduce.c verify.c fips202.c symmetric-shake.c nistkat/rng.c nistkat/PQCgenKAT_kem.c  -lcrypto
+make exit status: 0
+=== artifacts ===
+./lib/libpqcrystals_fips202_ref.so
+./lib/libpqcrystals_kyber1024_ref.so
+./lib/libpqcrystals_kyber512_ref.so
+./lib/libpqcrystals_kyber768_ref.so
+./nistkat/PQCgenKAT_kem1024
+./nistkat/PQCgenKAT_kem512
+./nistkat/PQCgenKAT_kem768
+./test/test_kyber1024
+./test/test_kyber512
+./test/test_kyber768
+./test/test_speed1024
+./test/test_speed512
+./test/test_speed768
+./test/test_vectors1024
+./test/test_vectors512
+./test/test_vectors768
+=== sha256 ===
+509b98e21095f0b13eb2a1185baca86b5879ef0a5c271e5c335d5b3afa43cffe  ./lib/libpqcrystals_fips202_ref.so
+cb2898fddd52542694d6d6e8e3618255413aa16dc1aafee8e1b5b73cccc47233  ./lib/libpqcrystals_kyber1024_ref.so
+ff6764f76d4da97829ef9a4ee901f53f129238f396624d48c964dfb23247775a  ./lib/libpqcrystals_kyber512_ref.so
+cda2d8798eba2037f505d9091e0805859fe6bbc2db4b25350f73b6760141335e  ./lib/libpqcrystals_kyber768_ref.so
+edf345cdf4fe92fd6cd4dbd9fe4e35c3b153be1232b72b85bc993d66dbfa0da6  ./nistkat/PQCgenKAT_kem.c
+cb0b81c4d0415382f9a3c9db955a762ab5f56da754e9328f5dc7f592ca389266  ./nistkat/PQCgenKAT_kem1024
+83a59e1b83000ea8e194424561ac0a606f9a08807d9b128e2bf15ffc9594a2bf  ./nistkat/PQCgenKAT_kem512
+7f41a1f2fbad065a6a5e729305d3f4fade1b50473a1389ebda231b4935c7fead  ./nistkat/PQCgenKAT_kem768
+6e92c15cb9786538b900f4e76d5446397c4993fcbcf0b5a93a716db6c2323bc6  ./test/test_kyber.c
+44967fda91f5eaaabbe8b269a136151d4a18822762471e99836b1667c7c8677f  ./test/test_kyber1024
+0dddaf013fe872b87544e32a14669c04130c6077d8ca9d9d94d775fb4a28cfad  ./test/test_kyber512
+849cf0d4cc627ba65195225f49276cfdf886c9096e8393a174146c81a07f58c0  ./test/test_kyber768
+8f08fc8f96f1b241d0c73a732e768b4031aeddafbc296dff7bb1be38e1d13599  ./test/test_speed.c
+0bb59010a9e34ba6bf77b06023de33d2225afae4049bf3bc7fde0ff4aef32e0f  ./test/test_speed1024
+799d15571553454e6ea85e40d186bdbbe45d5303decc8ed525bd217eb288f049  ./test/test_speed512
+b944300aa83a213291ed777b8e4de80bda0ca0d1776f52628e2a9dac396dc9aa  ./test/test_speed768
+90467f7d29b56413e8962b5ab49339b3e55272188d3ff714540bebaaf9e30c1f  ./test/test_vectors.c
+ebc681971e482688691c884ec80f8f838c7b1fc1c5655922967daa7765b2779f  ./test/test_vectors1024
+dd91f6941cedb2c3ae69235f3395556298c2c9b980b81f0590b7dfb71582bab4  ./test/test_vectors512
+2cc4e762f0f186296108bc3276fb45676004b74d2ef5a307bf07ae303b97500c  ./test/test_vectors768
